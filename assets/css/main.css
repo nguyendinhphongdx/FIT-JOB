@@ -117,8 +117,7 @@
 }
 
 .login__page-other {
-  margin-top: 34px;
-  
+  margin: 34px 0;
 }
 .login__page-other-text {
   margin-right: 72px;
@@ -136,4 +135,17 @@
   font-weight: 500px;
   color: var(--primary-color);
   cursor: pointer;
+}
+
+/* login */
+
+.login__page-forgot-account {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 23.44px;
+  color: var(--primary-color);
+}
+
+.login__page-title-input-login {
+  margin-bottom: 16px;
 }
