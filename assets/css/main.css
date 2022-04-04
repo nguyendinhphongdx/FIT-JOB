@@ -1,0 +1,139 @@
+.login__page {
+  background-color: var(--white-color);
+  display: flex;
+  width: 1920px;
+  height: 100%;
+  max-width: 100%;
+  background: transparent;
+}
+.login__page-left {
+  max-width: 43.4%;
+  background-color: var(--primary-color);
+}
+
+.login__page-logo-img {
+  width: 222px;
+  height: 90px;
+  margin: 35px 0 35px 56px;
+}
+.login__page-text-header {
+  font-size: 3.8rem;
+  line-height: 56.25px;
+  font-weight: 700 bold;
+  margin: 0 0 0 56px;
+  color: var(--white-color);
+}
+.login__page-text-text {
+  font-size: 32px;
+  line-height: 37.5px;
+  font-weight: 300;
+  margin: 16px 0 16px 56px;
+  color: var(--white-color);
+}
+.login__page-img {
+  display: flex;
+  position: relative;
+  max-width: 876px;
+  width: 100%;
+}
+
+.login__page-img-one {
+  width: 100%;
+  position: absolute;
+  right: -9%;
+}
+.login__page-right {
+  background-color: var(--white-color);
+  width: 1089px;
+  max-width: 56.7%;
+  display: flex;
+  justify-content: center;
+  border-radius: 60px 0px 0px 60px;
+}
+
+.login__page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 763px;
+  max-width: 80.3%;
+}
+
+.login__page-header {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 28.13px;
+  color: var(--primary-color);
+  margin-bottom: 111px;
+}
+
+.login__page-input {
+  position: relative;
+  width: 100%;
+}
+
+.login__page-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23.44px;
+  color: var(--black-color);
+  margin-bottom: 18px;
+}
+
+.login__page-title-input {
+  width: 100%;
+  height: 70px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 16.41px;
+  border: 1px solid #2a2e35;
+  border-radius: 34px;
+  padding-left: 27px;
+  margin-bottom: 50px;
+}
+.login__page-title-input:nth-child(6) {
+  margin-bottom: 16px;
+}
+
+.login__page-help{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+
+.login__page-registration {
+  margin-top: 54px;
+  width: 100%;
+  height: 70px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 37.5px;
+  border-radius: 34px;
+  border: 0;
+  cursor: pointer;
+}
+
+.login__page-other {
+  margin-top: 34px;
+  
+}
+.login__page-other-text {
+  margin-right: 72px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-color);
+  line-height: 16.41px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.login__page-other-login{
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 23.44px;
+  font-weight: 500px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
