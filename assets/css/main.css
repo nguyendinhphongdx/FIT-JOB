@@ -69,7 +69,7 @@
 }
 
 .login__page-input {
-  position: relative;
+  /* position: relative; */
   width: 100%;
 }
 
@@ -79,6 +79,10 @@
   line-height: 23.44px;
   color: var(--black-color);
   margin-bottom: 18px;
+  top: 25px;
+  left: 29px;
+  position: absolute;
+  pointer-events: none;
 }
 
 .login__page-title-input {
@@ -90,12 +94,24 @@
   border: 1px solid #2a2e35;
   border-radius: 34px;
   padding-left: 27px;
+
+}
+.login__page-input-group {
+  position: relative;
   margin-bottom: 50px;
 }
-.login__page-title-input:nth-child(6) {
-  margin-bottom: 16px;
+.login__page-title-input:focus + .login__page-title{
+  top: -13px;
+  padding: 0 7px;
+  background-color: var(--white-color);
+  font-size: 16px;
 }
-
+.login__page-title-input:not(:placeholder-shown) + .login__page-title {
+  top: -13px;
+  padding: 0 7px;
+  background-color: var(--white-color);
+  font-size: 16px;
+}
 .login__page-help{
   font-size: 16px;
   font-weight: 400;
