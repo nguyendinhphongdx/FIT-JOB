@@ -165,3 +165,146 @@
 .login__page-title-input-login {
   margin-bottom: 16px;
 }
+
+
+
+/* Otp */
+
+.app__otp {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  background-image: url(../img/Rectangle\ 150.png);
+  justify-content: center;
+  align-items: center;
+}
+.form__otp {
+  width: 652px;
+  height: 355px;
+  border-radius: 8px;
+  background-color: var(--white-color);
+}
+
+.form__otp-header{
+  margin: 32px 232px 4px 232px;
+  font-size: 20px;
+  line-height: 27.24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form__otp-header-text {
+  color: #03555A;
+
+}
+.form__otp-text{
+  margin: 0 224px 32px 224px;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 21.79px;
+  font-weight: 400;
+}
+.form__otp-text-err {
+  color: #212121;
+}
+
+.form__otp-input-list {
+  margin: 0 104px 8px 104px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.form__otp-input-item {
+  width: 48px;
+  height: 48px;
+  margin: 0 8px;
+  background-color: #EEEEEE;
+  list-style: none;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 32.68px;
+  border: none;
+  -webkit-appearance: none;
+}
+.form__otp-input-item::-webkit-outer-spin-button,
+.form__otp-input-item::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__otp-time-list{
+  margin: 12px 143px 48px 143px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__otp-time-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.79px;
+  color: #212121;
+}
+
+.form__otp-time-send {
+  font-size: 16px;
+  font-weight: 700;
+  color: #23BBD0;
+  line-height: 21.79px;
+  cursor: pointer;
+}
+.form__otp-time-time {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: #212121;
+}
+.form__otp-verify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.form__otp-verify-a {
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 317px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #03555A;
+  margin: 0 143px;
+  border: none;
+  cursor: pointer;
+}
+
+.form__otp-time-countdown-m {
+  width: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: #212121;
+  pointer-events: none;
+}
+.form__otp-time-countdown-s {
+  width: 26px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: #212121;
+  pointer-events: none;
+}
+.form__otp-time-countdown-m::-webkit-outer-spin-button,
+.form__otp-time-countdown-m::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__otp-time-countdown-s::-webkit-outer-spin-button,
+.form__otp-time-countdown-s::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

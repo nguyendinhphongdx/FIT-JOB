@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app__otp">
+        <div class="form__otp">
+            <div class="form__otp-header">
+                <lable class="form__otp-header-text">
+                    Nhập mã xác minh
+                </lable>
+            </div>
+            <div class="form__otp-text">
+                <lable class="form__otp-text-err">Vui lòng nhập mã xác minh</lable>
+            </div>
+
+            <div class="form__otp-input-list" id="form__otp-input-list">
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item1" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(1)'>
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item2" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(2)'>
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item3" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(3)'>
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item4" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(4)'>
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item5" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(5)'>
+                <input type="text" class="form__otp-input-item" id="form__otp-input-item6" maxlength=1
+                    oninput='digitValidate(this)' onkeyup='tabChange(6)'>
+            </div>
+            <!-- <span class="form__otp-err">Mã xác minh chưa chính xác</span> -->
+            <div class="form__otp-time-list">
+                <span class="form__otp-time-text">Bạn chưa nhận được mã?</span>
+                <div class="orm__otp-time-send-list">
+                    <span class="form__otp-time-send">Gửi lại mã</span>
+                    <input type="number" class="form__otp-time-countdown-m" value="1" id="form__otp-time-countdown-m">:
+                    <input type="number" class="form__otp-time-countdown-s" value="20" id="form__otp-time-countdown-s">
+                    <!-- <span class="form__otp-time-countdown">(01:20)</span> -->
+                </div>
+            </div>
+            <div class="form__otp-verify">
+                <button href="#" class="form__otp-verify-a">Xác nhận</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let m = document.getElementById('form__otp-time-countdown-m')
+    let s = document.getElementById('form__otp-time-countdown-s')
+    function limitText(limitField, limitNum) {
+        if (limitField.value.length > limitNum) {
+            limitField.value = limitField.value.substring(0, limitNum);
+        }
+    }
+    let digitValidate = function (ele) {
+        ele.value = ele.value.replace(/[^0-9]/g, '');
+    }
+
+    let tabChange = function (val) {
+        let ele = document.querySelectorAll('input');
+        if (ele[val - 1].value != '') {
+            if (val === 6) {
+                return
+            }
+            ele[val].focus()
+        } else if (ele[val - 1].value == '') {
+            ele[val - 2].focus()
+        }
+    }
+    function countdown() {
+        s.value--
+        s.innerHTML = s.value
+        if (s.value == 0 && m.value == 0) {
+            clearInterval(Intercountdown)
+            s.value = 0
+            return
+        }
+        if (s.value == 0) {
+            s.value = 59
+            m.value = 0;
+        }
+    }
+    var Intercountdown = setInterval(() => {
+        countdown()
+    }, 1000);
+</script>
+
+</html>
