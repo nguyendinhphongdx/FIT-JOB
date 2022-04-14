@@ -80,6 +80,9 @@
             }
             ele[val].focus()
         } else if (ele[val - 1].value == '') {
+            if (val === 1) {
+                return
+            }
             ele[val - 2].focus()
         }
     }
